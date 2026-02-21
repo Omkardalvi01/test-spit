@@ -2,6 +2,7 @@ import numpy as np
 
 # comment 1
 # comment 2
+# comment 3
 # Manually constructed data matrix (samples x features)
 X = np.array(
     [
