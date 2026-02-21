@@ -29,7 +29,7 @@ def verify_signature(payload_body: bytes, signature_header: str):
         raise HTTPException(status_code=403, detail="Invalid signature")
 
 
-@app.post("/webhook")
+@app.post("/")
 async def github_webhook(request: Request):
     body = await request.body()
 
