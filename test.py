@@ -1,6 +1,7 @@
 import numpy as np
 
 # comment 1
+# comment 2
 # Manually constructed data matrix (samples x features)
 X = np.array(
     [
