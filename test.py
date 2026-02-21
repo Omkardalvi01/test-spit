@@ -1,13 +1,16 @@
 import numpy as np
 
+# comment 1
 # Manually constructed data matrix (samples x features)
-X = np.array([
-    [2.0, 0.0, 1.0],
-    [3.0, 1.0, 2.0],
-    [4.0, 0.0, 3.0],
-    [5.0, 1.0, 4.0],
-    [6.0, 0.0, 5.0]
-])
+X = np.array(
+    [
+        [2.0, 0.0, 1.0],
+        [3.0, 1.0, 2.0],
+        [4.0, 0.0, 3.0],
+        [5.0, 1.0, 4.0],
+        [6.0, 0.0, 5.0],
+    ]
+)
 
 # Mean center
 mean = np.mean(X, axis=0)
@@ -15,6 +18,7 @@ X_centered = X - mean
 
 n_samples = X_centered.shape[0]
 cov_matrix = (X_centered.T @ X_centered) / (n_samples - 1)
+
 
 def power_iteration(A, num_iters=1000, tol=1e-6):
     b = np.ones(A.shape[0])
@@ -33,6 +37,7 @@ def power_iteration(A, num_iters=1000, tol=1e-6):
     eigenvalue = b.T @ A @ b
     return eigenvalue, b
 
+
 def eigen_decomposition_manual(A, k):
     A_copy = A.copy()
     eigenvalues = []
@@ -47,6 +52,7 @@ def eigen_decomposition_manual(A, k):
         A_copy = A_copy - val * np.outer(vec, vec)
 
     return np.array(eigenvalues), np.column_stack(eigenvectors)
+
 
 # Compute eigenvalues & eigenvectors manually
 k = 2
