@@ -7,7 +7,7 @@ This repository contains two independent sets of Python scripts: a GitHub webhoo
 A simple [FastAPI](https://fastapi.tiangolo.com/) application designed to receive and verify webhook payloads from GitHub. 
 
 ### Features
-- Listens for POST requests on the root (`/`) endpoint.
+- Listens for POST requests on the root (`/endpoint.
 - Validates the `x-hub-signature-256` header using HMAC-SHA256 to ensure the webhook legitimately originated from GitHub.
 - Extracts and logs repository branch names and commit messages.
 
